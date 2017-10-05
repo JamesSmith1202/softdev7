@@ -1,13 +1,12 @@
 {% extends "template.html" %} 
-{% block title %}Work06 - Echo{% endblock %} 
+{% block title %}Login{% endblock %} 
 {% block content %}
+{{errormessage}}
 <form method="POST">
-    <input type="text" name="username">
-    <input type="submit">
+  <p>Username:
+    <input type="text" name="username"></p>
+  <p>Password:    
+    <input type="password" name="password"></p>
+  <input type="submit">
 </form>
-<p>Request Method: {{request_method}}</p>
-{% if post_request %}
-<p>Username Entered: {{post_request}}</p>
-<p> Howdy, {{post_request}}!</p>
-{% endif %}
 {% endblock %}
